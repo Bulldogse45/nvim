@@ -1,6 +1,6 @@
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install neovim
+- sudo add-apt-repository ppa:neovim-ppa/unstable
+- sudo apt-get update
+- sudo apt-get install neovim
 
-mkdir ~/.config
-clone in .config directory
+- mkdir ~/.config
+- clone in .config directory
