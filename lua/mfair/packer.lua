@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
   use 'tpope/vim-fugitive'
+  use 'github/copilot.vim'
+  use 'folke/tokyonight.nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
