@@ -1,7 +1,7 @@
 local lspconfig = require('lspconfig')
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "eslint", "tsserver"}
+  ensure_installed = { "lua_ls", "eslint", "ts_ls"}
 })
 
 local on_attach = function(client, bufnr)
@@ -15,7 +15,7 @@ end
 lspconfig.lua_ls.setup {
   on_attach = on_attach
 }
-lspconfig.tsserver.setup{
+lspconfig.ts_ls.setup{
   on_attach = on_attach,
   init_options = {
     plugins = {
