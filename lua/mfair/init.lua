@@ -1,2 +1,2 @@
 require('mfair.remap')
-require('mfair.packer')
+require('mfair.lazy')

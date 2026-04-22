@@ -1,5 +1,4 @@
 require('mfair')
-vim.cmd 'colorscheme tokyonight'
 vim.opt.termguicolors = true
 vim.wo.number = true
 vim.wo.wrap = false
