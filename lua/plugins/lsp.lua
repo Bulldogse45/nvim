@@ -10,7 +10,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "eslint", "ts_ls" },
+        ensure_installed = { "lua_ls", "eslint", "ts_ls", "gopls" },
       })
     end,
   },
@@ -55,7 +55,21 @@ return {
         filetypes = { "javascript", "typescript", "vue" },
       })
 
-      vim.lsp.enable({ "lua_ls", "ts_ls", "eslint" })
+      vim.lsp.config("gopls", {
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+            completeUnimported = true,
+          },
+        },
+      })
+
+      vim.lsp.enable({ "lua_ls", "ts_ls", "eslint", "gopls" })
     end,
   },
 }
